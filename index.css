@@ -31,7 +31,7 @@ img {
 .text1,
 .text2,
 .cont2,
-.cont  {
+.cont {
     background-color: white;
     color: black;
     width: 95%;
@@ -639,7 +639,7 @@ footer {
     margin: 10px;
     margin-top: -240px;
     margin-bottom: 20px;
-    width: 75%;  
+    width: 75%;
     position: relative;
     right: -12%;
 }
@@ -666,4 +666,70 @@ footer .a2 {
 footer a {
     text-decoration: none;
     margin-top: 15px;
+}
+
+.anim::before {
+    content: "⭐⭐⭐⭐⭐";
+}
+
+.animeit {
+   width: 2000px; 
+   position: relative;
+   overflow: hidden;
+   right: 120px;
+}
+
+.iner {
+    width: fit-content;
+    display: flex;
+    gap: 16px;
+    animation: line 10s linear infinite;
+}
+
+.anim {
+    align-items: center;
+    gap: 0 4px;
+    width: 250px;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(161, 161, 161);
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.anim p {
+    font-size: 19px;
+    color: gray;
+}
+
+.fade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+
+@keyframes line {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 768px) {
+    header .nt {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-menu {
+        flex-direction: column;
+    }
+
+    article img {
+        max-width: 100%;
+    }
 }
