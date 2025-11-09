@@ -13,6 +13,8 @@ img {
     height: auto;
     margin-top: -10px;
     margin-left: 10px;
+    height: 120px;
+    width: 120px;
 }
 
 .gg {
@@ -49,11 +51,6 @@ h1 {
 
 h1::before {
     content: "🌟";
-}
-
-.nt img {
-    height: 120px;
-    width: 120px;
 }
 
 .nt {
@@ -642,6 +639,9 @@ footer {
     margin: 10px;
     margin-top: -240px;
     margin-bottom: 20px;
+    width: 75%;  
+    position: relative;
+    right: -12%;
 }
 
 footer li {

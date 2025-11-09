@@ -1,0 +1,310 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-family: "Play", sans-serif;
+    background-image: url(https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg?semt=ais_hybrid&w=740&q=80);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -10px;
+    margin-left: 10px;
+    height: 120px;
+    width: 120px;
+}
+
+h1 {
+    display: flex;
+    margin-top: 31px;
+    margin-left: 23px;
+    font-size: 30px;
+}
+
+h1::before {
+    content: "🌟";
+}
+
+.nt {
+    display: flex;
+}
+
+.container {
+    margin: -100px auto;
+    width: 55px;
+    margin-right: 100px;
+    background-color: rgb(68, 68, 68);
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 43px;
+    margin-top: -82px;
+    border-radius: 10%;
+    margin-right: 130px;
+}
+
+#check-menu {
+    display: none;
+}
+
+.container label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.burger-line {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    transition: 0.4s all;
+}
+
+.burger-line:nth-of-type(2),
+.burger-line:nth-of-type(3) {
+    top: 18px;
+}
+
+.burger-line:nth-of-type(4) {
+    top: 28px;
+}
+
+.header-menu {
+    display: block;
+    position: absolute;
+    width: 370%;
+    bottom: 0;
+    right: -70px;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: 0.4s all;
+    border-radius: 30px;
+    bottom: -10px;
+}
+
+.nt ul {
+    display: flex;
+    gap: 65px;
+    list-style: none;
+    margin-left: 176px;
+}
+
+.nt a {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+    font-weight: 700;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.nt li {
+    background-color: rgb(139, 138, 138);
+    border-radius: 20px;
+    width: 170px;
+    height: 55px;
+    transition: 0.4s all;
+    border: 1px solid black;
+}
+
+.nt li:hover {
+    background-color: rgb(43, 42, 42);
+}
+
+.header-menu a {
+    display: block;
+    width: 88%;
+    padding: 12px;
+    color: white;
+    background-color: rgb(88, 88, 88);
+    text-decoration: none;
+    border: 1px solid grey;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu a:hover {
+    background-color: orange;
+}
+
+#check-menu {
+    font-size: 16px;
+}
+
+#check-menu:checked~.header-menu {
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked~.burger-line:nth-of-type(1),
+#check-menu:checked~.burger-line:nth-of-type(4) {
+    display: none;
+}
+
+#check-menu:checked~.burger-line:nth-of-type(2) {
+    transform: rotate(45deg);
+}
+
+#check-menu:checked~.burger-line:nth-of-type(3) {
+    transform: rotate(-45deg);
+}
+
+header {
+    height: 100px;
+    background-color: rgb(182, 182, 182);
+    position: sticky;
+    border-radius: 20px;
+    margin: 10px;
+    top: 0;
+    z-index: 1000;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+main {
+    margin-top: 40px;
+    margin-left: 225px;
+    margin-right: 225px;
+    padding: 20px;
+}
+
+.pro {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meta li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 5px
+}
+
+.meta {
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.program {
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mogul1,
+.mogul2,
+.mogul3,
+.mogul4,
+.mogul5,
+.mogul6,
+.mogul7,
+.mogul8,
+.mogul9 {
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.geo h2 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.alg h2 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(182, 182, 182);
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 75%;  
+    position: relative;
+    right: -12%;
+}
+
+footer li {
+    display: flex;
+    list-style: none;
+}
+
+footer ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+footer .a1 {
+    font-size: 50px;
+}
+
+footer .a2 {
+    font-size: 45px;
+}
+
+footer a {
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+@media(max-width: 768px) {
+    header .nt {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-menu {
+        flex-direction: column;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+}
