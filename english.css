@@ -5,7 +5,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-family: "Play", sans-serif;
-    background-image: url(https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg?semt=ais_hybrid&w=740&q=80);
+    background-image: url(https://amiel.club/uploads/posts/2023-07/1689318359_amiel-club-p-big-ben-oboi-dizain-vkontakte-15.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -190,13 +190,6 @@ p {
     margin-top: 15px;
 }
 
-main {
-    margin-top: 40px;
-    margin-left: 225px;
-    margin-right: 225px;
-    padding: 20px;
-}
-
 .pro {
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.75);
@@ -204,6 +197,9 @@ main {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
+    width: 75%;
+    transform: translateX(15%);
+    margin-top: 30px;
 }
 
 .meta li {
@@ -221,6 +217,8 @@ main {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
+    transform: translateX(15%);
+    width: 75%;
 }
 
 .program {
@@ -231,6 +229,8 @@ main {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
+    transform: translateX(15%);
+    width: 75%;
 }
 
 .mogul1,
@@ -241,7 +241,15 @@ main {
 .mogul6,
 .mogul7,
 .mogul8,
-.mogul9 {
+.mogul9,
+.mogul10,
+.mogul11,
+.mogul12,
+.mogul13,
+.mogul14,
+.mogul15,
+.mogul16,
+.mogul17 {
     margin-top: 30px;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.75);
@@ -290,6 +298,38 @@ main {
     transform: translateY(-10px);
 }
 
+.mogul10:hover {
+    transform: translateY(-10px);
+}
+
+.mogul11:hover {
+    transform: translateY(-10px);
+}
+
+.mogul12:hover {
+    transform: translateY(-10px);
+}
+
+.mogul13:hover {
+    transform: translateY(-10px);
+}
+
+.mogul14:hover {
+    transform: translateY(-10px);
+}
+
+.mogul15:hover {
+    transform: translateY(-10px);
+}
+
+.mogul16:hover {
+    transform: translateY(-10px);
+}
+
+.mogul17:hover {
+    transform: translateY(-10px);
+}
+
 .geo h2 {
     font-size: 30px;
     padding: 20px;
@@ -301,15 +341,16 @@ main {
 }
 
 footer {
+    top: 17px;
     height: 100px;
     background-color: rgb(182, 182, 182);
     border-radius: 20px;
     margin: 10px;
     margin-top: -20px;
     margin-bottom: 20px;
-    width: 75%;
+    width: 80%;
     position: relative;
-    right: -12%;
+    right: -10%;
 }
 
 footer li {
@@ -334,6 +375,16 @@ footer .a2 {
 footer a {
     text-decoration: none;
     margin-top: 15px;
+}
+
+.lecs h2 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.gram h2 {
+    font-size: 30px;
+    padding: 20px;
 }
 
 @media(max-width: 768px) {

@@ -683,7 +683,7 @@ footer a {
     width: fit-content;
     display: flex;
     gap: 16px;
-    animation: line 10s linear infinite;
+    animation: line 16s linear infinite;
 }
 
 .anim {
