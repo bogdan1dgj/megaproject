@@ -5,7 +5,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-family: "Play", sans-serif;
-    background-image: url(https://amiel.club/uploads/posts/2023-07/1689318359_amiel-club-p-big-ben-oboi-dizain-vkontakte-15.jpg);
+    background-image: url(https://zastavki.gas-kvas.com/uploads/posts/2024-05/zastavki-gas-kvas-com-661i-p-zastavki-informatika-27.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -46,7 +46,6 @@ h1::before {
     margin-top: -82px;
     border-radius: 10%;
     margin-right: 130px;
-    z-index: 2;
 }
 
 #check-menu {
@@ -175,7 +174,7 @@ header {
     border-radius: 20px;
     margin: 10px;
     top: 0;
-    z-index: 2;
+    z-index: 1000;
     margin-top: 20px;
 }
 
@@ -190,6 +189,13 @@ p {
     margin-top: 15px;
 }
 
+main {
+    margin-top: 40px;
+    margin-left: 225px;
+    margin-right: 225px;
+    padding: 20px;
+}
+
 .pro {
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.88);
@@ -197,9 +203,6 @@ p {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
-    width: 75%;
-    transform: translateX(15%);
-    margin-top: 30px;
 }
 
 .meta li {
@@ -217,8 +220,6 @@ p {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
-    transform: translateX(15%);
-    width: 75%;
 }
 
 .program {
@@ -229,8 +230,6 @@ p {
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
-    transform: translateX(15%);
-    width: 75%;
 }
 
 .mogul1,
@@ -244,12 +243,7 @@ p {
 .mogul9,
 .mogul10,
 .mogul11,
-.mogul12,
-.mogul13,
-.mogul14,
-.mogul15,
-.mogul16,
-.mogul17 {
+.mogul12 {
     margin-top: 30px;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.75);
@@ -310,47 +304,36 @@ p {
     transform: translateY(-10px);
 }
 
-.mogul13:hover {
-    transform: translateY(-10px);
-}
-
-.mogul14:hover {
-    transform: translateY(-10px);
-}
-
-.mogul15:hover {
-    transform: translateY(-10px);
-}
-
-.mogul16:hover {
-    transform: translateY(-10px);
-}
-
-.mogul17:hover {
-    transform: translateY(-10px);
-}
-
-.geo h2 {
+.osn h2 {
     font-size: 30px;
     padding: 20px;
 }
 
-.alg h2 {
+.algo h2 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.prog h2 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.pass h2 {
     font-size: 30px;
     padding: 20px;
 }
 
 footer {
-    top: 17px;
     height: 100px;
     background-color: rgb(182, 182, 182);
     border-radius: 20px;
     margin: 10px;
     margin-top: -20px;
     margin-bottom: 20px;
-    width: 77.77%;
+    width: 72.86%;
     position: relative;
-    right: -11%;
+    right: -13%;
 }
 
 footer li {
@@ -377,13 +360,17 @@ footer a {
     margin-top: 15px;
 }
 
-.lecs h2 {
-    font-size: 30px;
-    padding: 20px;
-}
+@media(max-width: 768px) {
+    header .nt {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.gram h2 {
-    font-size: 30px;
-    padding: 20px;
-}
+    .header-menu {
+        flex-direction: column;
+    }
 
+    article img {
+        max-width: 100%;
+    }
+}

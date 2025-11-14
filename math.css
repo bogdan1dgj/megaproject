@@ -5,7 +5,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-family: "Play", sans-serif;
-    background-image: url(https://img.freepik.com/premium-vector/school-background-with-doodles-vector-illustration-hand-drawn-style-rulers-triangles-school-supplies-vector-illustration_647193-3275.jpg?semt=ais_hybrid&w=740&q=80);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -171,7 +170,6 @@ h1::before {
 header {
     height: 100px;
     background-color: rgb(182, 182, 182);
-    position: sticky;
     border-radius: 20px;
     margin: 10px;
     top: 0;
@@ -199,7 +197,7 @@ main {
 
 .pro {
     color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.88);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -216,7 +214,7 @@ main {
 .meta {
     margin-top: 30px;
     color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.88);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -226,7 +224,7 @@ main {
 .program {
     margin-top: 30px;
     color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.88);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -307,9 +305,9 @@ footer {
     margin: 10px;
     margin-top: -20px;
     margin-bottom: 20px;
-    width: 75%;
+    width: 72.86%;
     position: relative;
-    right: -12%;
+    right: -13%;
 }
 
 footer li {
