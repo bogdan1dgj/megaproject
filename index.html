@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mykyrs</title>
+    <title>Головна</title>
     <link rel="stylesheet" href="index.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cactus+Classical+Serif&family=Comfortaa:wght@300..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&family=Playwrite+DE+Grund+Guides&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
@@ -13,31 +13,40 @@
 </head>
 
 <body>
-    <div class="liners"></div>
-    <header>
+    <header class="site-header">
         <div class="nt">
             <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
-                alt="логотип">
-            <h1>EdSpace — простір знань і розвитку!</h1>
-            <ul>
+                alt="Логотип" class="logo-image">
+            <h1 class="site-title">EdSpace — простір знань і розвитку</h1>
+            <ul class="header-utility-nav">
                 <li><a href="index.html">Головна</a></li>
-                <li class="none"><a href="1">Реєстрація</a></li>
+                <li class="rep"><a href="">Репетитори</a></li>
+                <li class="none">
+                    <a href="1" aria-label="Реєстрація">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
+
             </ul>
         </div>
+
         <div class="container">
             <input type="checkbox" id="check-menu">
-            <label for="check-menu"></label>
+            <label for="check-menu" class="burger-label"></label>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
 
             <nav class="header-menu">
+                <div class="bur">
+                    <a href="1">Репетитори</a>
+                </div>
                 <a href="math.html">Математика</a>
                 <a href="english.html">Англійська</a>
                 <a href="1">Інформатика</a>
                 <a href="1">Фізика</a>
-                <a href="1">Біологія</a>
+                <a href="biology.html">Біологія</a>
                 <a href="1">Географія</a>
                 <a href="1">Укр.мова</a>
                 <a href="1">Укр.літ</a>
@@ -46,6 +55,9 @@
         </div>
     </header>
     <main>
+        <div class="arrow-up">
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
         <div class="text11">
             <p>
                 <b class="b">EdSpace</b> — це місце, де навчання стає пригодою, а знання — твоєю суперсилою. Ми створили
@@ -306,7 +318,6 @@
                             ефективно.</q>
                     </div>
                 </div>
-                <div class="fade"></div>
             </div>
         </div>
 
