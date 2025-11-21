@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mykyrs</title>
+    <title>Математика</title>
     <link rel="stylesheet" href="math.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cactus+Classical+Serif&family=Comfortaa:wght@300..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&family=Playwrite+DE+Grund+Guides&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-    </style>
+    <script src="https://kit.fontawesome.com/993e5daf38.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <div class="nt">
             <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
-                alt="логотип">
-            <h1>EdSpace — простір знань і розвитку!</h1>
-            <ul>
-                <li><a href="index.html">Головна!</a></li>
-                <li><a href="1">Курс!</a></li>
+                alt="Логотип" class="logo-image">
+            <h1 class="site-title">EdSpace — простір знань і розвитку</h1>
+            <h1 class="title">EdSpace</h1>
+            <ul class="header-utility-nav">
+                <li class="glova"><a href="index.html">Головна</a></li>
+                <li class="rep"><a href="">Репетитори</a></li>
+                <li class="none">
+                    <a href="1" aria-label="Реєстрація">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
             </ul>
         </div>
+
         <div class="container">
             <input type="checkbox" id="check-menu">
-            <label for="check-menu"></label>
+            <label for="check-menu" class="burger-label"></label>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
 
             <nav class="header-menu">
+                <div class="golovna-bur">
+                    <a href="index.html">Головна</a>
+                </div>
+                <div class="bur">
+                    <a href="1">Репетитори</a>
+                </div>
+                <div class="reg">
+                    <a href="1">Регістрація</a>
+                </div>
                 <a href="math.html">Математика</a>
                 <a href="english.html">Англійська</a>
                 <a href="inFormatuka.html">Інформатика</a>
                 <a href="1">Фізика</a>
-                <a href="1">Біологія</a>
+                <a href="biology.html">Біологія</a>
                 <a href="1">Географія</a>
                 <a href="1">Укр.мова</a>
                 <a href="1">Укр.літ</a>
@@ -44,78 +58,78 @@
         </div>
     </header>
     <main>
-        <div class="pro">
-            <h2>Про курс</h2>
-            <p>Цей курс створено для тих, хто прагне глибше зрозуміти основи та закономірності математики — від
-                арифметики
-                до елементів вищої математики. Матеріали подані просто та доступно, з прикладами, задачами, ілюстраціями
-                та
-                інтерактивними завданнями, що допомагають закріпити знання на практиці.</p>
+        <div class="arrow-up">
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
         </div>
-        <div class="meta">
-            <h2>Мета курсу</h2>
+        <div class="opus">
+            <h2 class="title-animate"><u>Вивчай математику легко та результативно</u></h2>
+            <p>Наші онлайн-курси допоможуть зрозуміти математику з нуля або поглибити свої знання. <br> Зручні уроки,
+                прості
+                пояснення та підтримка викладача — усе, щоб кожен зміг досягти високих результатів.</p>
+        </div>
+        
+        <div class="nashk">
+            <h2><u>Про курс</u></h2>
+            <p>Ми створили навчальну програму, яка підходить як для школярів, так і для дортошокласників, абітурієнтів
+                та всіх, хто хоче систематизувати знання з математики. Курс побудований так, щоб навіть складні теми
+                пояснювалися простою мовою, із наочними прикладами та практичними завданнями.
+
+                <br>Уроки короткі, структуровані та подані в логічній послідовності, щоб навчання було комфортним і
+                ефективним.
+            </p>
+        </div>
+        <div class="video">
+             <details>
+            <summary>Починай день з приємного!</summary>
+            <video title="mp4" controls>
+                <source src="1.mp4">
+            </video>
+             <video title="mp4" controls>
+                <source src="2.mp4">
+            </video>
+             <video title="mp4" controls>
+                <source src="3.mp4">
+            </video>
+             <video title="mp4" controls>
+                <source src="4.mp4">
+            </video>
+             <video title="mp4" controls>
+                <source src="5.mp4">
+            </video>
+             <video title="mp4" controls>
+                <source src="6.mp4">
+            </video>
+        </details>
+        </div>
+        <div class="for">
+            <h2><u>Для кого підходить курс:</u></h2>
             <ul>
-                <li>Розвинути логічне та аналітичне мислення учнів.</li>
-                <li>Навчити застосовувати математичні знання для розв’язання практичних задач.</li>
-                <li>Пояснити основні математичні поняття та закони через приклади з життя.</li>
-                <li>Формувати вміння працювати з формулами, рівняннями, графіками.</li>
-                <li>Показати красу й універсальність математики як мови науки.</li>
+                <li>Для учнів, які хочуть покращити оцінки</li>
+                <li>Для тих, хто готується до контрольних і ДПА/НМТ</li>
+                <li>Для абітурієнтів, яким потрібна впевнена база</li>
+                <li>Для дорослих, які хочуть освіжити свої знання</li>
             </ul>
+            <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2015/09/02/150902074312_math_pupil_624x351_thinkstock_nocredit.jpg.webp"
+                alt="memes">
         </div>
         <div class="program">
-            <div class="alg">
-                <h2>Алгебра та початки аналізу</h2>
-            </div>
-            <div class="mogul1">
-                <h2>Тема 1. Числа і вирази </h2>
-                <p>Дійсні числа, операції над ними, степені, корені, логарифми, поняття відношень, пропорцій та
-                    відсотків.</p>
-            </div>
-            <div class="mogul2">
-                <h2>Тема 2. Рівняння та нерівності </h2>
-                <p>Лінійні, квадратні, ірраціональні, раціональні, показникові, логарифмічні та тригонометричні рівняння
-                    і нерівності, а також їх системи.</p>
-            </div>
-            <div class="mogul3">
-                <h2>Тема 3. Функції </h2>
-                <p>Властивості функцій (лінійні, квадратні, експоненційні, логарифмічні, тригонометричні), побудова їх
-                    графіків.</p>
-            </div>
-            <div class="mogul4">
-                <h2>Тема 4. Похідна та інтеграл </h2>
-                <p>Похідна функції та її зміст (геометричний і фізичний), первісна та визначений інтеграл.</p>
-            </div>
-            <div class="mogul5">
-                <h2>Тема 5. Комбінаторика та ймовірність </h2>
-                <p>Перестановки, комбінації, розміщення, ймовірність випадкової події, статистичні показники (середнє
-                    значення), аналіз діаграм та графіків.</p>
-            </div>
-            <div class="geo">
-                <h2>Геометрія</h2>
-            </div>
-            <div class="mogul7">
-                <h2>Тема 1. Планіметрія </h2>
-                <p>Елементарні геометричні фігури та їх властивості на площині: трикутники, чотирикутники, кола,
-                    многокутники.
-                </p>
-            </div>
-            <div class="mogul8">
-                <h2>Тема 2. Стереометрія </h2>
-                <p>Геометричні тіла в просторі: призми, циліндри, піраміди, конуси, кулі. Обчислення їх об'ємів та площ
-                    поверхонь.</p>
-            </div>
-            <div class="mogul9">
-                <h2>Тема 3. Координати та вектори </h2>
-                <p>Координати на площині та вектори, геометричні переміщення. </p>
-            </div>
+            <h2>Програма курсу</h2>
+            <h3><q><u>Що ви отримаєте на курсі</u></q></h3>
+            <ul>
+                <li>Покрокові відеоуроки, де кожна нова тема спирається на вже вивчену.</li>
+                <li>Практичні завдання з автоматичною перевіркою, щоб одразу закріплювати знання.</li>
+                <li>Теорію “простою мовою”, яка допоможе зрозуміти навіть найскладніші теми.</li>
+                <li>Живі сесії з викладачем, де можна поставити запитання та розібрати складні моменти.</li>
+                <li>Підтримку в чаті, щоб ви ніколи не залишались наодинці з труднощами.</li>
+            </ul>
         </div>
     </main>
     <footer>
-        <ul>
-            <li class="a1"><a href="mailto:homework23@gmail.com" target="_blank">✉️</a></li>
-            <li class="a2"><a href="tel:+38065495036" target="_blank">📞</a></li>
-            <li class="a2"><a href="https://t.me/znohub" target="_blank">✈️</a></li>
-        </ul>
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-telegram-plane"></i></a>
+            <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
     </footer>
 </body>
 

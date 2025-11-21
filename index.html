@@ -18,8 +18,9 @@
             <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
                 alt="Логотип" class="logo-image">
             <h1 class="site-title">EdSpace — простір знань і розвитку</h1>
+            <h1 class="title">EdSpace</h1>
             <ul class="header-utility-nav">
-                <li><a href="index.html">Головна</a></li>
+                <li class="glova"><a href="index.html">Головна</a></li>
                 <li class="rep"><a href="">Репетитори</a></li>
                 <li class="none">
                     <a href="1" aria-label="Реєстрація">
@@ -39,8 +40,14 @@
             <div class="burger-line"></div>
 
             <nav class="header-menu">
+                <div class="golovna-bur">
+                    <a href="index.html">Головна</a>
+                </div>
                 <div class="bur">
                     <a href="1">Репетитори</a>
+                </div>
+                <div class="reg">
+                    <a href="1">Регістрація</a>
                 </div>
                 <a href="math.html">Математика</a>
                 <a href="english.html">Англійська</a>
@@ -356,6 +363,22 @@
             <p>Так, учні можуть ставити питання викладачам, отримувати пояснення складних тем та додаткові матеріали для
                 кращого розуміння предмета.</p>
         </details>
+        <form>
+            <h2 class="form_title">Відгуки<i class="fa-solid fa-star"></i></h2>
+            <h3><q><i>Кожний відгук для нас — це крок до того, щоб стати кращими для вас.</i></q></h3>
+
+            <div class="form_group">
+                <input class="form_input" type="text" id="name" name="user_name" placeholder=" " required>
+                <label class="form_label" for="name">ПІБ</label>
+            </div>
+
+            <div class="form_group">
+                <input class="form_input" type="text" id="text" name="user_text" placeholder=" " required>
+                <label class="form_label" for="text">Відгук</label>
+            </div>
+
+            <button type="submit" class="form_button">Відправити</button>
+        </form>
     </main>
     <footer>
         <div class="social">

@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     z-index: 3000;
-    background-color: rgb(24, 86, 62);
+    background-color: rgb(255, 0, 0);
     height: 0.3rem;
     animation: leme linear;
     animation-timeline: scroll();
@@ -126,6 +126,14 @@ h1::before {
     margin-top: 0;
 }
 
+.reg {
+    display: none;
+}
+
+.bur {
+    display: none;
+}
+
 .container {
     margin: 0;
     margin-left: 30px;
@@ -176,7 +184,7 @@ h1::before {
 }
 
 .header-menu {
-        display: flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
     right: -10px;
@@ -226,31 +234,6 @@ h1::before {
 
 #check-menu:checked~.burger-line:nth-of-type(3) {
     transform: rotate(-45deg);
-}
-
-.new::after {
-    content: "";
-    width: 5px;
-    height: 5px;
-    background-color: red;
-    margin-top: 15px;
-    margin-left: 10px;
-    border-radius: 50%;
-    animation: new 2s infinite;
-}
-
-@keyframes new {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 h2 {
@@ -396,7 +379,7 @@ footer {
 
 .arrow-up {
     position: fixed;
-    bottom: 50px;
+    bottom: 36px;
     right: 36px;
     z-index: 999;
     opacity: 0.6;
@@ -439,10 +422,6 @@ footer {
     animation: line 60s linear infinite;
 }
 
-.iner:hover {
-    animation-play-state: paused;
-}
-
 .anim {
     align-items: center;
     gap: 0 4px;
@@ -459,6 +438,98 @@ footer {
     color: gray;
 }
 
+form {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 14px rgb(151, 150, 150);
+    text-align: center;
+    margin: 25px auto;
+}
+
+form h2 {
+    font-size: 25px;
+}
+
+form h3 {
+    font-size: 18px;
+}
+
+
+.form_input,
+.form_button {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.form_title {
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+}
+
+.form_group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form_label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+    color: rgb(185, 185, 185);
+    transition: 0.3s;
+    margin-top: -7px;
+}
+
+.form_input {
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form_button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(143, 143, 143);
+    outline: none;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.form_button:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.form_input:focus~.form_label,
+.form_input:not(:placeholder-shown)~.form_label {
+    top: -18px;
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+}
+
+.golovna-bur {
+    display: none;
+}
+
+.title {
+    display: none;
+}
+
+.golovna-bur a,
+.bur a,
+.reg a {
+    background-color: #7c7c7c;
+}
 
 @keyframes line {
     0% {
@@ -478,17 +549,120 @@ footer {
     .bur {
         display: none;
     }
+
+    form {
+        padding: 24px;
+    }
+
+    .reg {
+        display: none;
+    }
+
+    .title {
+        display: block;
+    }
+}
+
+@media (max-width: 910px) {
+    .rep {
+        display: none;
+    }
+
+    .bur {
+        display: block;
+    }
+
 }
 
 @media (max-width: 700px) {
     .rep {
         display: none;
     }
+
     .bur {
         display: block;
     }
+
+
     .arrow-up {
-        right: 15px;
-        bottom: 20px;
+        right: 30px;
+        bottom: 45px;
+    }
+
+    form {
+        display: none;
+    }
+
+    .reg {
+        display: none;
+    }
+
+    #check-menu:checked~.header-menu {
+        max-height: 700px;
+        font-size: 14px;
+    }
+
+    .nt li.none {
+        width: 55px;
+        border-radius: 50%;
+        display: none;
+    }
+
+    .reg {
+        display: block;
+    }
+
+
+}
+
+@media (max-width: 595px) {
+    .glova {
+        display: none;
+    }
+
+    .golovna-bur {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    form {
+        padding: 16px;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    form h3 {
+        font-size: 15px;
+    }
+
+    .reg {
+        display: block;
+    }
+
+    .nt li.none {
+        width: 55px;
+        border-radius: 50%;
+        display: none;
+    }
+
+    .golovna-bur {
+        display: block;
+    }
+
+    .glova {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .title {
+        display: block;
     }
 }
