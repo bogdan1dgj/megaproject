@@ -456,12 +456,12 @@ video {
     max-width: 450px;
     height: 450px;
     flex-shrink: 0;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+    
     margin: 10px 0;
     border-radius: 20px;
     order: 1;
@@ -481,19 +481,18 @@ video {
     max-width: 450px;
     height: 450px;
     flex-shrink: 0;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+    
     margin: 10px 0;
     border-radius: 20px;
     order: 3;
 }
 
-.ball,
-.bal {
+.ball, .bal {
     border: 2px solid black;
     margin: 20px;
     width: 85%;
@@ -505,14 +504,12 @@ video {
     justify-content: space-around;
 }
 
-.ball h3,
-.bal h3 {
+.ball h3, .bal h3 {
     font-size: 25px;
     margin-top: 15px;
 }
 
-.ball p,
-.bal p {
+.ball p, .bal p {
     font-size: 40px;
     text-align: center;
     margin: 5px 0;
@@ -527,8 +524,7 @@ video {
 }
 
 
-.ball ul,
-.bal ul {
+.ball ul, .bal ul {
     background-color: transparent;
     border: 2px solid black;
     padding: 10px;
@@ -545,8 +541,7 @@ video {
     text-align: center;
 }
 
-.ych,
-.ych1 {
+.ych, .ych1 {
     margin: 15px 10%;
     text-align: center;
     font-size: 16px;
@@ -604,7 +599,6 @@ video {
 }
 
 @media (min-width: 1301px) {
-
     .opus,
     .nashk,
     .program,
@@ -614,13 +608,47 @@ video {
         margin-left: auto;
         margin-right: auto;
     }
-
-    .point,
-    .balles {
+    
+    .point, .balles {
         flex-grow: 0;
         width: 450px;
     }
 }
+
+/* --- СТИЛІ ДЛЯ ПК (ВІД 911px) --- */
+@media (min-width: 911px) {
+    /* Робимо контейнер горизонтальним */
+    .all-points {
+        flex-direction: row;
+        flex-wrap: nowrap; /* Запобігаємо перенесенню на нову лінію */
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 10px;
+    }
+
+    /* На середніх і великих екранах блоки мають фіксовану максимальну ширину */
+    .point, .balles {
+        flex-grow: 0; 
+        flex-basis: auto; 
+        width: 40%; /* Розподіл місця */
+        max-width: 450px; 
+        margin: 0; /* Видаляємо вертикальні відступи, залишаємо горизонтальні gap */
+    }
+
+    /* Серце між ними має також бути в рядку */
+    .heard {
+        order: 2; 
+        flex-shrink: 0; 
+        margin: 0 10px;
+    }
+    
+    .point { order: 1; }
+    .balles { order: 3; }
+    
+    /* Для 1300px+ також залишаємо row-напрямок, замінивши старий блок */
+}
+/* --- КІНЕЦЬ СТИЛІВ ДЛЯ ПК --- */
 
 
 @media (max-width: 1300px) {
@@ -639,9 +667,8 @@ video {
     .title {
         display: block;
     }
-
-    .point,
-    .balles {
+    
+    .point, .balles {
         flex-grow: 1;
         width: 80%;
         min-width: 350px;
@@ -655,6 +682,7 @@ video {
     }
 }
 
+/* --- АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ (max-width: 910px) --- */
 @media (max-width: 910px) {
     .rep {
         display: none;
@@ -681,12 +709,24 @@ video {
     .for h2 {
         margin-left: 24%;
     }
-
-    .point,
-    .balles {
+    
+    .all-points {
+        /* Повертаємо вертикальне розташування для планшетів і менших екранів */
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    .point, .balles {
         min-width: 300px;
         height: 400px;
+        width: 90%; /* Знову робимо їх вертикально розташованими і широкими */
+        margin: 10px 0;
     }
+    
+    /* Зберігаємо порядок для вертикального розташування */
+    .point { order: 1; }
+    .heard { order: 2; }
+    .balles { order: 3; }
 
     .heard {
         font-size: 120px;
@@ -695,8 +735,9 @@ video {
 
 }
 
+/* --- АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ І МАЛИХ ПЛАНШЕТІВ (max-width: 768px) --- */
 @media (max-width: 768px) {
-
+    
     .opus,
     .nashk,
     .program,
@@ -709,69 +750,52 @@ video {
         margin-right: 3%;
         box-sizing: border-box;
     }
-
-    #check-menu:checked~.header-menu {
-        max-height: 800px;
-        margin-top: -32px;
-    }
-
+    
     .opus,
     .nashk {
         padding: 15px;
     }
-
+    
     .for {
         padding: 20px;
     }
-
+    
     .all-points {
         gap: 10px;
         padding: 0;
     }
-
-    .point,
-    .balles {
+    
+    .point, .balles {
         width: 100%;
         max-width: 450px;
         height: auto;
         margin: 10px auto;
         min-width: unset;
     }
-
+    
     .heard {
         font-size: 100px;
         margin: 10px 0;
     }
 
-    .point {
-        order: 1;
-    }
-
-    .heard {
-        order: 2;
-    }
-
-    .balles {
-        order: 3;
-    }
-
-    .ball,
-    .bal {
+    .point { order: 1; }
+    .heard { order: 2; }
+    .balles { order: 3; }
+    
+    .ball, .bal {
         width: 90%;
         margin: 15px auto;
     }
 
-    .ball b,
-    .bal b {
+    .ball b, .bal b {
         font-size: 60px;
     }
-
-    .ych,
-    .ych1 {
+    
+    .ych, .ych1 {
         margin: 10px 5%;
         padding-bottom: 10px;
     }
-
+    
     .rep {
         display: none;
     }
@@ -781,18 +805,19 @@ video {
     }
 }
 
+/* --- АДАПТАЦІЯ ДЛЯ ДУЖЕ МАЛИХ ЕКРАНІВ (max-width: 480px) --- */
 @media (max-width: 480px) {
 
     .reg {
         display: block;
     }
-
+    
     main {
         max-width: 100%;
         margin-left: 0;
         padding: 0 5px;
     }
-
+    
     .opus,
     .nashk,
     .program,
@@ -804,50 +829,42 @@ video {
         padding: 10px 15px;
         font-size: 16px;
     }
-
-    .point,
-    .balles {
+    
+    .point, .balles {
         width: 100%;
         padding: 0;
     }
-
-    .ball,
-    .bal {
+    
+    .ball, .bal {
         margin: 10px auto;
         width: 98%;
         border: 1px solid black;
         padding: 10px 0;
     }
-
-    .ball h3,
-    .bal h3 {
-        font-size: 18px;
+    
+    .ball h3, .bal h3 {
+         font-size: 18px;
     }
-
-    .ball b,
-    .bal b {
+    
+    .ball b, .bal b {
         font-size: 35px;
     }
-
-    .ball p,
-    .bal p {
+    .ball p, .bal p {
         font-size: 18px;
     }
-
-    .ych,
-    .ych1 {
+    
+    .ych, .ych1 {
         margin: 5px 5%;
         font-size: 12px;
     }
-
-    .ball ul,
-    .bal ul {
+    
+    .ball ul, .bal ul {
         width: 90%;
         margin: 5px auto;
         padding: 8px;
         font-size: 14px;
     }
-
+    
     .nt li.none {
         width: 55px;
         border-radius: 50%;
