@@ -223,7 +223,7 @@ h1::before {
 }
 
 #check-menu:checked~.header-menu {
-    max-height: 500px;
+    max-height: 800px;
     font-size: 16px;
 }
 
@@ -330,6 +330,7 @@ video,
     }
 }
 
+
 .opus,
 .nashk {
     width: 80%;
@@ -337,9 +338,10 @@ video,
     padding: 20px;
     border-radius: 20px;
     font-weight: 700;
-    background: linear-gradient(135deg, #6a4c93, #b185db);
+    background: linear-gradient(135deg, #a052e0, #c896ff);
     color: yellow;
     text-align: center;
+    max-width: 900px;
 }
 
 
@@ -399,12 +401,13 @@ h3 {
     text-align: center;
 }
 
+
 summary {
+    box-sizing: border-box;
     text-align: center;
     font-size: 20px;
     background: linear-gradient(135deg, #6a4c93, #b185db);
     color: yellow;
-    width: 100%;
     max-width: 600px;
     padding: 10px 20px;
     border-radius: 10px;
@@ -435,6 +438,190 @@ video {
     border-radius: 15px;
 }
 
+.all-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.point {
+    background: linear-gradient(135deg, #d9ff00, #ffe600);
+    width: 90%;
+    max-width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 10px 0;
+    border-radius: 20px;
+    order: 1;
+}
+
+.heard {
+    font-size: 150px;
+    color: black;
+    margin: 10px 0;
+    flex-shrink: 0;
+    order: 2;
+}
+
+.balles {
+    background: linear-gradient(135deg, #16f078, #3cff00);
+    width: 90%;
+    max-width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 10px 0;
+    border-radius: 20px;
+    order: 3;
+}
+
+.ball,
+.bal {
+    border: 2px solid black;
+    margin: 20px;
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ball h3,
+.bal h3 {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.ball p,
+.bal p {
+    font-size: 40px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.ball b {
+    font-size: 70px;
+}
+
+.bal b {
+    font-size: 70px;
+}
+
+
+.ball ul,
+.bal ul {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 20px;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ych,
+.ych1 {
+    margin: 15px 10%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ych1 {
+    text-align: left;
+}
+
+
+.register {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.register p {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.register button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: white;
+    transition: 0.3s;
+}
+
+.register button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 94, 98, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1301px) {
+
+    .opus,
+    .nashk,
+    .program,
+    .register,
+    .for,
+    summary {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .point,
+    .balles {
+        flex-grow: 0;
+        width: 450px;
+    }
+}
+
 
 @media (max-width: 1300px) {
     h1 {
@@ -451,6 +638,13 @@ video {
 
     .title {
         display: block;
+    }
+
+    .point,
+    .balles {
+        flex-grow: 1;
+        width: 80%;
+        min-width: 350px;
     }
 
 }
@@ -474,23 +668,110 @@ video {
         display: none;
     }
 
-    .for{
+    .for {
         margin: auto;
         width: 70%;
     }
 
     .for ul {
         margin-left: 15%;
-    margin-top: -34px;
+        margin-top: -34px;
     }
 
     .for h2 {
         margin-left: 24%;
     }
 
+    .point,
+    .balles {
+        min-width: 300px;
+        height: 400px;
+    }
+
+    .heard {
+        font-size: 120px;
+        margin: 10px 0;
+    }
+
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+
+    .opus,
+    .nashk,
+    .program,
+    .register,
+    .for,
+    .all-points,
+    summary {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+
+    #check-menu:checked~.header-menu {
+        max-height: 800px;
+        margin-top: -32px;
+    }
+
+    .opus,
+    .nashk {
+        padding: 15px;
+    }
+
+    .for {
+        padding: 20px;
+    }
+
+    .all-points {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .point,
+    .balles {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 10px auto;
+        min-width: unset;
+    }
+
+    .heard {
+        font-size: 100px;
+        margin: 10px 0;
+    }
+
+    .point {
+        order: 1;
+    }
+
+    .heard {
+        order: 2;
+    }
+
+    .balles {
+        order: 3;
+    }
+
+    .ball,
+    .bal {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .ball b,
+    .bal b {
+        font-size: 60px;
+    }
+
+    .ych,
+    .ych1 {
+        margin: 10px 5%;
+        padding-bottom: 10px;
+    }
+
     .rep {
         display: none;
     }
@@ -498,67 +779,73 @@ video {
     .bur {
         display: block;
     }
-
-    .for {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .opus,
-    .nashk {
-        width: 90%;
-    }
-
-    .program {
-        width: 90%;
-    }
-
-
-    .arrow-up {
-        right: 30px;
-        bottom: 45px;
-    }
-
-    .reg {
-        display: none;
-    }
-
-    #check-menu:checked~.header-menu {
-        max-height: 700px;
-        font-size: 14px;
-    }
-
-    .nt li.none {
-        width: 55px;
-        border-radius: 50%;
-        display: none;
-    }
-
-    .reg {
-        display: block;
-    }
-
-
-}
-
-@media (max-width: 595px) {
-    .glova {
-        display: none;
-    }
-
-    .golovna-bur {
-        display: block;
-    }
-
-    video {
-        width: 95%;
-    }
 }
 
 @media (max-width: 480px) {
 
     .reg {
         display: block;
+    }
+
+    main {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 0 5px;
+    }
+
+    .opus,
+    .nashk,
+    .program,
+    .register,
+    .for,
+    summary {
+        width: 94%;
+        margin: 20px 3%;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .point,
+    .balles {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ball,
+    .bal {
+        margin: 10px auto;
+        width: 98%;
+        border: 1px solid black;
+        padding: 10px 0;
+    }
+
+    .ball h3,
+    .bal h3 {
+        font-size: 18px;
+    }
+
+    .ball b,
+    .bal b {
+        font-size: 35px;
+    }
+
+    .ball p,
+    .bal p {
+        font-size: 18px;
+    }
+
+    .ych,
+    .ych1 {
+        margin: 5px 5%;
+        font-size: 12px;
+    }
+
+    .ball ul,
+    .bal ul {
+        width: 90%;
+        margin: 5px auto;
+        padding: 8px;
+        font-size: 14px;
     }
 
     .nt li.none {
@@ -583,13 +870,9 @@ video {
         display: block;
     }
 
-    main {
-        max-width: 400px;
-        margin-left: 23px;
-    }
 
     summary {
-        max-width: 300px;
+        max-width: 95%;
     }
 
     .for h2 {
@@ -597,6 +880,6 @@ video {
     }
 
     .for ul {
-margin-left: -40px;
+        margin-left: -40px;
     }
 }
