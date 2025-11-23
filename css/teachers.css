@@ -1,0 +1,485 @@
+@charset "UTF-8";
+/* --- ЗМІННІ (Space Gradient Theme) --- */
+/* --- БАЗОВІ СТИЛІ --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Play", sans-serif;
+  background-color: #f8f9fa;
+  /* Смужка зверху (Градієнт) */
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3000;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  height: 0.3rem;
+  animation: leme linear;
+  animation-timeline: scroll();
+  scale: 0 1;
+  transform-origin: left;
+}
+
+@keyframes leme {
+  to {
+    scale: 1 1;
+  }
+}
+/* --- ХЕДЕР (ГРАДІЄНТ) --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+  position: sticky;
+  border-radius: 20px;
+  margin: 10px;
+  top: 0;
+  z-index: 1000;
+  margin-top: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(30, 60, 114, 0.2);
+}
+
+.nt {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+}
+.nt img {
+  max-width: 100%;
+  height: 80px;
+  width: 80px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.nt ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 auto;
+  flex-shrink: 0;
+}
+.nt li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  width: 170px;
+  height: 55px;
+  transition: 0.3s all ease;
+}
+.nt li:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.nt li:hover a {
+  color: #1e3c72;
+}
+.nt li.none {
+  width: 55px;
+  border-radius: 50%;
+}
+.nt li.none a {
+  height: 100%;
+  align-items: center;
+  margin-top: 0;
+}
+.nt a {
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  font-size: 30px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+h1::before {
+  content: "🌟";
+  margin-right: 10px;
+}
+
+/* --- БУРГЕР МЕНЮ --- */
+.reg, .bur, .golovna-bur, .title {
+  display: none;
+}
+
+.container {
+  margin: 0 0 0 30px;
+  width: 55px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  height: 43px;
+  border-radius: 10%;
+  flex-shrink: 0;
+}
+.container label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+#check-menu {
+  display: none;
+}
+
+.burger-line {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 35px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.4s all;
+}
+.burger-line:nth-of-type(2), .burger-line:nth-of-type(3) {
+  top: 18px;
+}
+.burger-line:nth-of-type(4) {
+  top: 28px;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -10px;
+  top: 85px;
+  width: 230px;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0;
+  border-radius: 20px;
+  padding: 0;
+  transition: 0.4s;
+  background-color: transparent;
+}
+.header-menu a {
+  display: block;
+  width: 88%;
+  padding: 12px;
+  margin: 1px;
+  background-color: #1e3c72;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+}
+.header-menu a:hover {
+  background-color: #ffffff;
+  color: #1e3c72;
+}
+
+#check-menu:checked ~ .header-menu {
+  max-height: 500px;
+  font-size: 16px;
+}
+#check-menu:checked ~ .burger-line:nth-of-type(1), #check-menu:checked ~ .burger-line:nth-of-type(4) {
+  display: none;
+}
+#check-menu:checked ~ .burger-line:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+#check-menu:checked ~ .burger-line:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+.golovna-bur a, .bur a, .reg a {
+  background-color: #764ba2;
+}
+
+/* --- МЕДІА ЗАПИТИ --- */
+@media (max-width: 1300px) {
+  h1 {
+    display: none;
+  }
+  .bur, .reg {
+    display: none;
+  }
+  .title {
+    display: block;
+  }
+}
+@media (max-width: 910px) {
+  .rep {
+    display: none;
+  }
+  .bur {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  .rep {
+    display: none;
+  }
+  .bur {
+    display: block;
+  }
+  .arrow-up {
+    right: 30px;
+    bottom: 45px;
+  }
+  form {
+    display: none;
+  }
+  .reg {
+    display: none;
+  }
+  #check-menu:checked ~ .header-menu {
+    max-height: 700px;
+    font-size: 14px;
+  }
+  .nt li.none {
+    width: 55px;
+    border-radius: 50%;
+    display: none;
+  }
+  .reg {
+    display: block;
+  }
+}
+@media (max-width: 595px) {
+  .glova {
+    display: none;
+  }
+  .golovna-bur {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .reg {
+    display: block;
+  }
+  .nt li.none {
+    width: 55px;
+    border-radius: 50%;
+    display: none;
+  }
+  .golovna-bur {
+    display: block;
+  }
+  .glova {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+  .title {
+    display: block;
+  }
+}
+/* Скролбар (Синій) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3c72;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3c72;
+}
+
+/* --- СТИЛІ КОНТЕНТУ --- */
+.main-content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section-title {
+  color: #1e3c72;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #764ba2;
+  padding-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Інтро */
+.teachers-intro p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #444;
+  background: linear-gradient(to right, #ffffff, #f0f4ff);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid #1e3c72;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.subject-block {
+  margin-bottom: 30px;
+}
+
+/* Сітка */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Картка викладача */
+.teacher-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(66, 130, 242, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.teacher-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(42, 82, 152, 0.15);
+  border-color: #764ba2;
+}
+.teacher-card:hover .teacher-photo {
+  border-color: #764ba2;
+}
+.teacher-card h3 {
+  color: #1e3c72;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.teacher-card figure {
+  margin: 0 0 20px 0;
+}
+.teacher-card {
+  /* Круглі фото */
+}
+.teacher-card .teacher-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f0f4ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.teacher-card figcaption {
+  display: none;
+}
+.teacher-card p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Секція "Наш підхід" */
+.approach-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+  color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(30, 60, 114, 0.3);
+  position: relative;
+}
+.approach-section .section-title {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+.approach-section h3 {
+  color: #b2ebf2;
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+.approach-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eef;
+}
+
+.approach-list {
+  margin-left: 20px;
+  color: #ffffff;
+}
+.approach-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Футер (Градієнт) */
+.site-footer {
+  height: 100px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(30, 60, 114, 0.2);
+}
+
+.social {
+  display: flex;
+  gap: 50px;
+}
+.social a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2.5rem;
+  transition: 0.3s;
+}
+.social a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=teachers.css.map */
