@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Українська мова — всі теми</title>
+    <link rel="stylesheet" href="mova.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        answer.style.opacity = "1";
+                    } else {
+                        answer.style.maxHeight = null;
+                        answer.style.opacity = "0";
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/993e5daf38.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nt">
+            <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
+                alt="Логотип" class="logo-image">
+            <h1 class="site-title" style="text-align: center; font-size: 40px;">EdSpace </h1>
+            <ul class="header-utility-nav">
+                <li class="glova"><a href="index.html">Головна</a></li>
+                <li class="rep"><a href="teachers.html">Репетитори</a></li>
+                <li class="none">
+                    <a href="form.html" aria-label="Реєстрація">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <input type="checkbox" id="check-menu">
+
+            <nav class="header-menu">
+                <a href="math.html">Математика</a>
+                <a href="english.html">Англійська</a>
+                <a href="biology.html">Біологія</a>
+                <a href="geography.html">Географія</a>
+                <a href="mova.html">Укр.мова</a>
+                <a href="ukrlit.html">Укр.літ</a>
+                <a href="history.html">Історія</a>
+            </nav>
+
+            <label for="check-menu" class="burger-label"></label>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </header>
+
+    <main class="ukr-page">
+        <div class="arrow-up">
+            <a href="#top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+        <section class="ukr-hero">
+            <div class="ukr-hero-content">
+                <h2 class="ukr-hero-title">Українська мова — всі теми</h2>
+                <p class="ukr-hero-subtitle">
+                    Повний курс граматики, орфографії, пунктуації, морфології та синтаксису. Структуровано, просто,
+                    зрозуміло.
+                </p>
+            </div>
+        </section>
+
+        <section class="ukr-about">
+            <h2 class="about-title">Про курс</h2>
+            <p class="about-tex">
+                Курс «Українська мова» створений для учнів, студентів та всіх, хто прагне системно опанувати
+                граматику, орфографію, пунктуацію та культуру мовлення. Матеріал подано просто й структуровано,
+                з прикладами, вправами, правилами, винятками та інтерактивними завданнями для закріплення.
+            </p>
+        </section>
+
+        <section class="ukr-goals">
+            <h2 class="goals-title">Мета курсу</h2>
+            <ul class="goals-list">
+                <li class="goals-item">Сформувати чітке розуміння основних розділів української мови.</li>
+                <li class="goals-item">Навчити правильно застосовувати правила орфографії та пунктуації.</li>
+                <li class="goals-item">Розвинути грамотне письмове та усне мовлення.</li>
+                <li class="goals-item">Пояснити основні помилки та способи їх уникнення.</li>
+                <li class="goals-item">Підготувати учнів до контрольних робіт, ДПА та НМТ.</li>
+            </ul>
+        </section>
+
+        <section class="ukr-topics-section">
+            <h3 class="section-title">Розділи курсу</h3>
+
+            <div class="ukr-topics-grid">
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Фонетика</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Голосні та приголосні</li>
+                        <li>Тверді, м’які та шиплячі</li>
+                        <li>Подовження приголосних</li>
+                        <li>Звуко-буквений аналіз</li>
+                    </ul>
+                </div>
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Орфографія</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Правопис префіксів</li>
+                        <li>М’який знак</li>
+                        <li>Апостроф</li>
+                        <li>Подвоєння букв</li>
+                    </ul>
+                </div>
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Лексикологія</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Синоніми</li>
+                        <li>Антоніми</li>
+                        <li>Омоніми</li>
+                        <li>Фразеологізми</li>
+                    </ul>
+                </div>
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Морфологія</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Іменник</li>
+                        <li>Прикметник</li>
+                        <li>Дієслово</li>
+                        <li>Прислівник</li>
+                    </ul>
+                </div>
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Синтаксис</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Словосполучення</li>
+                        <li>Прості речення</li>
+                        <li>Складні речення</li>
+                        <li>Однорідні члени</li>
+                    </ul>
+                </div>
+
+                <div class="ukr-topic-card">
+                    <h4 class="ukr-topic-title">Пунктуація</h4>
+                    <ul class="ukr-topic-list">
+                        <li>Кома</li>
+                        <li>Двокрапка</li>
+                        <li>Тире</li>
+                        <li>Розділові знаки у складних реченнях</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section class="popular-materials">
+            <h2 class="section-title">Популярні матеріали</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <h4>Правопис м’якого знака</h4>
+                    <p>Коротке правило + типові помилки з прикладами.</p>
+                    <a href="img/pr1.jpg" class="material-btn">Переглянути</a>
+                </div>
+                <div class="material-card">
+                    <h4>Будова складного речення</h4>
+                    <p>Схеми, пояснення та приклади для НМТ.</p>
+                    <a href="img/pr2.png" class="material-btn">Переглянути</a>
+                </div>
+                <div class="material-card">
+                    <h4>Фразеологізми</h4>
+                    <p>Таблиця найпоширеніших виразів із поясненнями.</p>
+                    <a href="img/pr3.jpg" class="material-btn">Переглянути</a>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <h2 class="section-title">Часті запитання</h2>
+
+            <div class="faq-item">
+                <h4 class="faq-question">Для кого підходить цей курс?</h4>
+                <p class="faq-answer">Для учнів 5–11 класів, абітурієнтів та всіх, хто хоче покращити грамотність.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 class="faq-question">Чи є практичні завдання?</h4>
+                <p class="faq-answer">Так, у кожному розділі є вправи та тести.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 class="faq-question">Чи можна займатися без реєстрації?</h4>
+                <p class="faq-answer">Так, більшість матеріалів доступні без акаунта.</p>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-telegram-plane"></i></a>
+            <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
