@@ -1,18 +1,16 @@
-// --- ЗМІННІ (Твої кольори) ---
-$primary-color: rgb(24, 86, 62);   // Темно-зелений
-$accent-color: rgb(80, 190, 130);  // М'ятний
+$primary-color: rgb(24, 86, 62); 
+$accent-color: rgb(80, 190, 130); 
 $bg-color: #f2f2f2;
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
 $text-color: rgb(50, 50, 50);
 $gray-text: #777;
-$gray-header-bg: rgb(172, 172, 172); // Якщо використовується як фолбек
+$gray-header-bg: rgb(172, 172, 172); 
 $gray-border: rgba(90, 60, 45, 0.05);
 
 $font-main: "Play", sans-serif;
 $font-serif: 'Alegreya', serif;
 
-// --- БАЗОВІ СТИЛІ ---
 html {
   scroll-behavior: smooth;
 }
@@ -24,7 +22,6 @@ body {
   font-family: $font-main;
   background-color: $bg-color;
 
-  // Смужка зверху
   &::before {
     content: "";
     position: fixed;
@@ -45,7 +42,6 @@ body {
   to { scale: 1 1; }
 }
 
-// --- ХЕДЕР ---
 header {
   display: flex;
   justify-content: space-between;
@@ -79,7 +75,6 @@ h1 {
   }
 }
 
-// --- НАВІГАЦІЯ (.nt) ---
 .nt {
   display: flex;
   align-items: center;
@@ -147,7 +142,6 @@ h1 {
   }
 }
 
-// --- БУРГЕР МЕНЮ ---
 .reg, .bur, .golovna-bur, .title { display: none; }
 
 .container {
@@ -226,7 +220,6 @@ h1 {
   }
 }
 
-// Логіка відкриття меню
 #check-menu:checked ~ {
   .header-menu {
     max-height: 500px;
@@ -243,7 +236,6 @@ h1 {
   background-color: #7c7c7c;
 }
 
-// --- МЕДІА ЗАПИТИ ---
 @media (max-width: 1300px) {
   h1 { display: none; }
   .bur, .reg { display: none; }
@@ -293,7 +285,6 @@ h1 {
   .title { display: block; }
 }
 
-// Скролбар
 ::-webkit-scrollbar {
   width: 10px;
   &-track { background: #f1f1f1; }
@@ -304,7 +295,6 @@ h1 {
   }
 }
 
-// --- ТИПОГРАФІКА ---
 h2 {
   font-size: 22px;
   margin-top: 15px;
@@ -316,7 +306,6 @@ p {
   margin-top: 15px;
 }
 
-// --- MAIN CONTENT ---
 .main-content {
   width: 90%;
   max-width: 900px;
@@ -348,9 +337,6 @@ p {
   }
 }
 
-// --- СПЕЦИФІЧНІ БЛОКИ БІОЛОГІЇ ---
-
-// Інтро
 .course-intro {
   background-color: $primary-color;
   color: $white;
@@ -407,7 +393,6 @@ p {
   }
 }
 
-// Візуальна картинка
 .course-visual {
   margin: 0;
 
@@ -429,7 +414,6 @@ p {
   }
 }
 
-// Білі картки (деталі, програма, переваги)
 .course-details,
 .course-program,
 .course-benefits {
@@ -446,7 +430,6 @@ p {
   }
 }
 
-// Список програми
 .program-list {
   list-style-type: disc;
   padding-left: 40px;
@@ -457,7 +440,6 @@ p {
   }
 }
 
-// Причини вчити (Grid)
 .reasons-grid {
   display: flex;
   justify-content: space-between;
@@ -492,7 +474,6 @@ p {
   }
 }
 
-// Банер внизу
 .bio-banner {
   background-color: $primary-color;
   padding: 30px;
@@ -526,7 +507,6 @@ p {
   }
 }
 
-// --- ФУТЕР ---
 .site-footer {
   height: 100px;
   background-color: $primary-color;

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація на курси</title>
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cactus+Classical+Serif&family=Comfortaa:wght@300..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&family=Playwrite+DE+Grund+Guides&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/993e5daf38.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="liners"></div>
+
+    <header class="site-header">
+        <div class="nt">
+            <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
+                alt="Логотип" class="logo-image">
+            <h1 class="site-title">EdSpace — простір знань і розвитку</h1>
+            <h1 class="title">EdSpace</h1>
+            <ul class="header-utility-nav">
+                <li class="glova"><a href="index.html">Головна</a></li>
+                <li class="rep"><a href="teachers.html">Викладачі</a></li>
+                <li class="none">
+                    <a href="form.html" aria-label="Реєстрація">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <input type="checkbox" id="check-menu">
+            <label for="check-menu" class="burger-label"></label>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+
+            <nav class="header-menu">
+                <div class="golovna-bur">
+                    <a href="index.html">Головна</a>
+                </div>
+                <div class="bur">
+                    <a href="teachers.html">Викладачі</a>
+                </div>
+                <div class="reg">
+                    <a href="form.html">Реєстрація</a>
+                </div>
+                <a href="math.html">Математика</a>
+                <a href="english.html">Англійська</a>
+                <a href="biology.html">Біологія</a>
+                <a href="geography.html">Географія</a>
+                <a href="1">Укр.мова</a>
+                <a href="1">Укр.літ</a>
+                <a href="1">Історія</a>
+            </nav>
+        </div>
+    </header>
+
+<main class="main-content">
+        <div class="intro-text">
+            <h2>Зареєструйтеся на наші курси!</h2>
+            <p>Бо у нас найкращі платформи, викладачі та програма!</p>
+        </div>
+
+        <div class="form-container">
+            <p><strong>Заповніть форму будь ласка</strong></p>
+            
+            <form class="form-wrapper">
+                <div class="form-group">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="user_name" placeholder="Ваше імʼя" required minlength="2" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Прізвище</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Введіть прізвище" required minlength="2" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" placeholder="Ваша електронна пошта" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380 ___ ___ ___" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Навчальний предмет</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Оберіть предмет</option>
+                        <option value="mathematics">Математика</option>
+                        <option value="english">Англійська мова</option>
+                        <option value="biology">Біологія</option>
+                        <option value="geography">Географія</option>
+                        <option value="history_ukraine">Історія України</option>
+                        <option value="ukrainian_language">Українська мова</option>
+                        <option value="ukrainian_literature">Українська література</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lessons_week">Кількість занять на тиждень</label>
+                    <select id="lessons_week" name="lessons_week" required>
+                        <option value="" disabled selected>Оберіть кількість</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" name="age" placeholder="Введіть свій вік" min="10" max="29" required>
+                </div>
+
+                <div class="form-group submit-group">
+                    <button type="submit" class="btn-submit">Відправити</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="sidebar-wrapper">
+            
+            <aside class="info-sidebar">
+                <h2>Разом до вершин!</h2>
+                <p>Дякуємо за вашу довіру та бажаємо успіхів у навчанні!</p>
+            </aside>
+
+            <aside class="info-sidebar benefits-sidebar">
+                <h3>🔥 Чому обирають нас?</h3>
+                <ul class="benefits-list">
+                    <li>✅ <strong>Досвідчені викладачі</strong> з найкращих ВНЗ країни</li>
+                    <li>✅ <strong>Гнучкий графік</strong> – навчайся коли зручно</li>
+                    <li>✅ <strong>Інтерактивна платформа</strong> з доступом 24/7</li>
+                    <li>✅ <strong>Сертифікат</strong> після завершення курсу</li>
+                </ul>
+            </aside>
+
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-telegram-plane"></i></a>
+            <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
