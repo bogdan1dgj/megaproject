@@ -4,46 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mykyrs</title>
+    <title>Головна</title>
     <link rel="stylesheet" href="index.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cactus+Classical+Serif&family=Comfortaa:wght@300..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&family=Playwrite+DE+Grund+Guides&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
     </style>
+    <script src="https://kit.fontawesome.com/993e5daf38.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <div class="nt">
             <img src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-learning-education-or-knowledge-symbol-icon-vector-png-image_21544039.png"
-                alt="логотип">
-            <h1>EdSpace — простір знань і розвитку!</h1>
-            <ul>
-                <li><a href="index.html">Головна!</a></li>
-                <li><a href="1">Курс!</a></li>
+                alt="Логотип" class="logo-image">
+            <h1 class="site-title">EdSpace — простір знань і розвитку</h1>
+            <h1 class="title">EdSpace</h1>
+            <ul class="header-utility-nav">
+                <li class="glova"><a href="index.html">Головна</a></li>
+                <li class="rep"><a href="">Репетитори</a></li>
+                <li class="none">
+                    <a href="1" aria-label="Реєстрація">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
+
             </ul>
         </div>
+
         <div class="container">
             <input type="checkbox" id="check-menu">
-            <label for="check-menu"></label>
+            <label for="check-menu" class="burger-label"></label>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
             <div class="burger-line"></div>
 
             <nav class="header-menu">
+                <div class="golovna-bur">
+                    <a href="index.html">Головна</a>
+                </div>
+                <div class="bur">
+                    <a href="teachers.html">Репетитори</a>
+                </div>
+                <div class="reg">
+                    <a href="form.html">Регістрація</a>
+                </div>
                 <a href="math.html">Математика</a>
                 <a href="english.html">Англійська</a>
-                <a href="1">Інформатика</a>
-                <a href="1">Фізика</a>
-                <a href="1">Біологія</a>
-                <a href="1">Географія</a>
-                <a href="1">Укр.мова</a>
-                <a href="1">Укр.літ</a>
-                <a href="1">Історія</a>
+                <a href="biology.html">Біологія</a>
+                <a href="geography.html">Географія</a>
+                <a href="mova.html">Укр.мова</a>
+                <a href="ukrlit.html">Укр.літ</a>
+                <a href="history.thml">Історія</a>
             </nav>
         </div>
     </header>
     <main>
+        <div class="arrow-up">
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
         <div class="text11">
             <p>
                 <b class="b">EdSpace</b> — це місце, де навчання стає пригодою, а знання — твоєю суперсилою. Ми створили
@@ -304,7 +323,6 @@
                             ефективно.</q>
                     </div>
                 </div>
-                <div class="fade"></div>
             </div>
         </div>
 
@@ -317,56 +335,55 @@
                 А навчання — це шлях до свободи.
                 І цей шлях починається з EdSpace.</p>
         </div>
-        <h2>Часті питання!?</h2>
-        <div class="container1">
-            <input type="checkbox" id="check-menu1">
-            <label for="check-menu1">Яка тривалість курсу?</label>
-            <div class="burger-line1"></div>
-            <div class="burger-line1"></div>
+        <h2 class="h2222">Часті питання!?</h2>
+        <details>
+            <summary>Які курси ви пропонуєте?</summary>
+            <p>Ми пропонуємо курси з основних шкільних дисциплін: математики, української мови, англійської мови,
+                історії, фізики, хімії, біології та інформатики.</p>
+        </details>
+        <details>
+            <summary>Чи підходять курси для різних класів?</summary>
+            <p>Так, програми розроблені для учнів 5–11 класів. Кожен курс має рівні складності та матеріали, адаптовані
+                під конкретний клас і навчальну програму.</p>
+        </details>
+        <details>
+            <summary>Чи можна підготуватися до контрольних, ДПА або ЗНО?</summary>
+            <p>Так! Ми маємо спеціальні підготовчі модулі, що охоплюють головні теми, тести, тренувальні завдання та
+                роз’яснення, які допоможуть успішно скласти будь-яку перевірку знань.</p>
+        </details>
+        <details>
+            <summary>Як побудований курс із шкільного предмета?</summary>
+            <p>Курс складається з коротких пояснень тем, відеоуроків, практичних вправ, тестів і підсумкових завдань.
+                Учень може навчатися у власному темпі та повторювати матеріал скільки потрібно.</p>
+        </details>
+        <details>
+            <summary>Чи можуть учні отримати допомогу від викладача?</summary>
+            <p>Так, учні можуть ставити питання викладачам, отримувати пояснення складних тем та додаткові матеріали для
+                кращого розуміння предмета.</p>
+        </details>
+        <form>
+            <h2 class="form_title">Відгуки<i class="fa-solid fa-star"></i></h2>
+            <h3><q><i>Кожний відгук для нас — це крок до того, щоб стати кращими для вас.</i></q></h3>
 
-            <nav class="header-menu1">
-                <span class="fisrt">Тривалість курсу залежить від твого темпу та можливостей.
-                    Ти можеш обирати зручний для себе ритм
-                    навчання.</span>
-            </nav>
-        </div>
+            <div class="form_group">
+                <input class="form_input" type="text" id="name" name="user_name" placeholder=" " required>
+                <label class="form_label" for="name">ПІБ</label>
+            </div>
 
-        <div class="container2">
-            <input type="checkbox" id="check-menu2">
-            <label for="check-menu2">Чи підходить платформа для початківців?</label>
-            <div class="burger-line2"></div>
-            <div class="burger-line2"></div>
-            <nav class="header-menu2">
-                <span class="fisrt2">Звісно! Ми пояснюємо все просто, навіть найскладніші теми. Почати може
-                    кожен.</span>
-            </nav>
-        </div>
+            <div class="form_group">
+                <input class="form_input" type="text" id="text" name="user_text" placeholder=" " required>
+                <label class="form_label" for="text">Відгук</label>
+            </div>
 
-        <div class="container3">
-            <input type="checkbox" id="check-menu3">
-            <label for="check-menu3">Що потрібно для старту?</label>
-            <div class="burger-line3"></div>
-            <div class="burger-line3"></div>
-            <nav class="header-menu3">
-                <span class="fisrt3">Лише бажання вчитися і будь-який пристрій з доступом до Інтернету.</span>
-            </nav>
-        </div>
-        <div class="container4">
-            <input type="checkbox" id="check-menu4">
-            <label for="check-menu4">Чи є підтримка адміністраторів сайту?</label>
-            <div class="burger-line4"></div>
-            <div class="burger-line4"></div>
-            <nav class="header-menu4">
-                <span class="fisrt4">Так, ти можеш ставити запитання й отримувати відповідь від нас.</span>
-            </nav>
-        </div>
+            <button type="submit" class="form_button">Відправити</button>
+        </form>
     </main>
     <footer>
-        <ul>
-            <li class="a1"><a href="mailto:homework23@gmail.com" target="_blank">✉️</a></li>
-            <li class="a2"><a href="tel:+38065495036" target="_blank">📞</a></li>
-            <li class="a2"><a href="https://t.me/znohub" target="_blank">✈️</a></li>
-        </ul>
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-telegram-plane"></i></a>
+            <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
     </footer>
 
 </body>
