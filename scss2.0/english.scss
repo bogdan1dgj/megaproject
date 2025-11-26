@@ -232,8 +232,6 @@ h1 {
     }
 }
 
-/* ---------- CONTENT ----------- */
-
 h2 {
     font-size: 22px;
     margin-top: 15px;
@@ -488,8 +486,6 @@ main {
     color: #dfdfdf;
 }
 
-/* ---------- MEDIA ---------- */
-
 @media (min-width: 700px) {
     .who-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -537,8 +533,6 @@ main {
     padding: 12px;
 }
 
-/* ---------- REGISTER ---------- */
-
 .register {
     background: linear-gradient(135deg, #f6d365, #fda085);
     border-radius: 20px;
@@ -573,8 +567,6 @@ main {
     }
 }
 
-/* ---------- ARROW ---------- */
-
 .arrow-up {
     position: fixed;
     bottom: 36px;
@@ -595,8 +587,6 @@ main {
         border: 1px solid rgba(255, 255, 255, 0.03);
     }
 }
-
-/* ---------- FOOTER ---------- */
 
 footer {
     height: 100px;
@@ -629,8 +619,6 @@ footer {
         }
     }
 }
-
-/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 1300px) {
     h1 {
